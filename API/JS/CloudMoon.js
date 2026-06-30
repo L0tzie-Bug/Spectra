@@ -1,6 +1,6 @@
 async function getCloudMoonUrls() {
   try {
-    const response = await fetch('/API/CloudMoon.json');
+    const response = await fetch('/Spectra/API/CloudMoon.json');
     if (!response.ok) return [];
     const data = await response.json();
     return data?.CloudMoonAPIURLS || [];
@@ -10,6 +10,5 @@ async function getCloudMoonUrls() {
 }
 (async () => {
   const activeUrls = await getCloudMoonUrls();
-  if (activeUrls.length === 0) return;
   window.cloudMoonUrls = activeUrls;
 })();
