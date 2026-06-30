@@ -1,0 +1,9 @@
+{
+  "CloudMoonAPIURLS" : [
+    "https://api.cloudmoon.cloudbatata.com",
+    "https://api.prod.cloudmoonapp.com",
+    "https://api.prod.geometry.today",
+    "https://hrz5zfjq02.execute-api.us-east-1.amazonaws.com",
+    "https://api.prod.viewoncloud.com"
+  ]
+}
