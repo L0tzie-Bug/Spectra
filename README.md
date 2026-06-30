@@ -11,7 +11,6 @@ Cloud gaming service based on multiple combined services.
 
 ## Services in Use
 - CloudMoon
-- Raccoon Game
 - Etc. (Any service featuring instant access)
 
 ## Devices We'll Offer
