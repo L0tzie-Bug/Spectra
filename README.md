@@ -1,3 +1,8 @@
+<p align="center">
+  <img src="assets/logo.png" width="150" height="150" style="background-color: black; border-radius: 50%; padding: 15px;" alt="Project Logo">
+</p>
+
+
 # Spectra
 Cloud gaming service based on multiple combined services.
 
