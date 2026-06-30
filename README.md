@@ -23,7 +23,7 @@ Cloud gaming service based on multiple combined services.
 - [ ] **Environment & API Foundation**
   - [ ] Initialize each official API client or write custom HTTP fetch wrappers.
   - [ ] Implement an automated token refresh mechanism to handle session expiration for each service simultaneously.
-  - [ ] Map all CloudMoon endpoints required for virtual instance provisioning.
+  - [ ] Map all API endpoints required for virtual instance provisioning.
 - [ ] **Authentication & Account Linking**
   - [x] Implement secure encryption for storing user-specific CloudMoon session tokens.
   - [x] Add account disconnection flows to wipe user data safely upon request.
