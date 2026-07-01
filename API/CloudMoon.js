@@ -1,15 +1,22 @@
-async function loadCloudMoonUrls() {
+(async function loadCloudMoonUrls() {
   try {
     const response = await fetch('/Spectra/API/CloudMoon.json');
-    if (!response.ok) {
-      window.cloudMoonUrls = [];
-      return;
-    }
+    if (!response.ok) return null;
     const data = await response.json();
-    window.cloudMoonUrls = data.CloudMoonAPIURLS || [];
-  } catch (error) {
-    window.cloudMoonUrls = [];
+    const urls = data.CloudMoonAPIURLS || [];
+    for (const url of urls) {
+      try {
+        const pingResponse = await fetch(`${url}/_ping`);
+        if (!pingResponse.ok) continue;
+        const pingData = await pingResponse.json();
+        if (pingData?.code === "0" && pingData?.message === "pong") {
+          window.workingCloudMoonUrl = url;
+          return url;
+        }
+      } catch {}
+    }
+    return null;
+  } catch {
+    return null;
   }
-}
-
-loadCloudMoonUrls();
+})();
