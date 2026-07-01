@@ -1,0 +1,19 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CloudMoon Status</title>
+</head>
+<body>
+    <div>CloudMoon API URL: <span id="url">Loading...</span></div>
+
+    <script src="API/CloudMoon.js"></script>
+    <script>
+        const checkInterval = setInterval(() => {
+            if (window.workingCloudMoonUrl) {
+                document.getElementById('url').textContent = window.workingCloudMoonUrl;
+                clearInterval(checkInterval);
+            }
+        }, 100);
+    </script>
+</body>
+</html>
